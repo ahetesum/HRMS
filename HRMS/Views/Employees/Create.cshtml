@@ -1,0 +1,106 @@
+﻿@model HRMS.Models.Employee
+
+<div class="admin-form theme-primary">
+
+    <div class="panel heading-border panel-primary">
+        <div class="panel-body bg-light">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+
+                <div class="section-divider mb40" id="spy1">
+                    <span>Organizational Info</span>
+                </div>
+
+
+                                <!-- .section-divider -->
+                <!-- Basic Inputs -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "First Name" } })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1"></div>
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Middle Name" } })
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name" } })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1"></div>
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label for="datepicker2" class="field prepend-picker-icon">
+                                <input type="text" id="createEmpDatePicker" name="DateOfJoining" class="gui-input" placeholder="Date of Joining">
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Phone Number" } })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1"></div>
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.OfficePhone, new { htmlAttributes = new { @class = "form-control", @placeholder = "Office Extention" } })
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.SystemId, new { htmlAttributes = new { @class = "form-control", @placeholder = "System Id" } })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1"></div>
+                    <div class="col-md-6">
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- end .form-body section -->
+                <div class="panel-footer ">
+                    <button type="submit" class="button btn-primary">Submit</button>
+                </div>
+                <!-- end .form-footer section -->
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+

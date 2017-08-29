@@ -1,0 +1,66 @@
+﻿@model HRMS.Models.Address
+
+
+<div class="admin-form theme-primary">
+
+    <div class="panel heading-border panel-primary">
+        <div class="panel-body bg-light">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+
+
+
+                <div class="section-divider mb40" id="spy1">
+                    <span>Address Deatails</span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.AddressLine1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Flat No/Colony" } })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1"></div>
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.AddressLine2, new { htmlAttributes = new { @class = "form-control", @placeholder = "Land Mark" } })
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @placeholder = "City" } })
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-1"></div>
+                    <div class="col-md-6">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.Pin, new { htmlAttributes = new { @class = "form-control", @placeholder = "Pin" } })
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end .section section -->
+                <!-- end .form-body section -->
+                <div class="panel-footer ">
+                    <button type="submit" class="button btn-primary">Submit</button>
+                </div>
+                <!-- end .form-footer section -->
+            }
+        </div>
+    </div>
+</div>
+
+

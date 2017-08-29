@@ -1,0 +1,83 @@
+﻿@model HRMS.Models.SalaryStack
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalaryStack</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BasicPay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasicPay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeAllowence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeAllowence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelAllowence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TravelAllowence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VariablePay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VariablePay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BenifitPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BenifitPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProvidentFund)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProvidentFund)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gratuty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gratuty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthBenifit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthBenifit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

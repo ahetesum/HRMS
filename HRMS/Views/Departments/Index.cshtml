@@ -1,0 +1,186 @@
+﻿@model IEnumerable<HRMS.Models.Department>
+<div class="admin-form theme-primary">
+
+
+    <div class="panel">
+        <div class="panel-menu admin-form theme-primary">
+
+        </div>
+        <div class="panel-body pn">
+            <div class="table-responsive">
+                <table class="table admin-form  fs13">
+                    <thead>
+                        <tr class="bg-light">
+                            <th class="">Name</th>
+                            <th class="">Desc</th>
+                            <th class="">Code</th>
+                            <th class="text-right">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td class="">@item.Name</td>
+                                <td class="">@item.Description</td>
+                                <td class="">@item.Code</td>
+                                <td class="text-right">
+                                    <div class="btn-group text-right">
+                                        <button type="button" class="btn btn-success br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            Active
+                                            <span class="caret ml5"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                                            </li>
+                                            <li>
+                                                @Html.ActionLink("Details", "Details", new { id = item.Id })
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li class="active">
+                                                <a href="#">Active</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Suspend</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            @*<tr>
+                                    <td class="text-center">
+                                        <label class="option block mn">
+                                            <input type="checkbox" name="mobileos" value="FR">
+                                            <span class="checkbox mn"></span>
+                                        </label>
+                                    </td>
+                                    <td class="w50">
+                                        <img class="img-responsive mw30 ib mr10" title="user" src="assets/img/avatars/1.jpg">
+                                    </td>
+                                    <td class="">Roger Rover</td>
+                                    <td class="">roger@company.com</td>
+                                    <td class="">12/03/2014</td>
+                                    <td class="">33</td>
+                                    <td class="">$17,100</td>
+                                    <td class="text-right">
+                                        <div class="btn-group text-right">
+                                            <button type="button" class="btn btn-warning br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                In-Active
+                                                <span class="caret ml5"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="#">Edit</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Contact</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li class="active">
+                                                    <a href="#">Active</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Suspend</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="option block mn">
+                                            <input type="checkbox" name="mobileos" value="FR">
+                                            <span class="checkbox mn"></span>
+                                        </label>
+                                    </td>
+                                    <td class="w50">
+                                        <img class="img-responsive mw30 ib mr10" title="user" src="assets/img/avatars/2.jpg">
+                                    </td>
+                                    <td class="">Laura Smileton</td>
+                                    <td class="">laura@company.com</td>
+                                    <td class="">12/03/2014</td>
+                                    <td class="">12</td>
+                                    <td class="">$3,100</td>
+                                    <td class="text-right">
+                                        <div class="btn-group text-right">
+                                            <button type="button" class="btn btn-danger br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                Suspended
+                                                <span class="caret ml5"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="#">Edit</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Contact</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li class="active">
+                                                    <a href="#">Active</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Suspend</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="option block mn">
+                                            <input type="checkbox" name="mobileos" value="FR">
+                                            <span class="checkbox mn"></span>
+                                        </label>
+                                    </td>
+                                    <td class="w50">
+                                        <img class="img-responsive mw30 ib mr10" title="user" src="assets/img/avatars/1.jpg">
+                                    </td>
+                                    <td class="">Dave Robert</td>
+                                    <td class="">dave@company.com</td>
+                                    <td class="">12/03/2014</td>
+                                    <td class="">222</td>
+                                    <td class="">$3,600</td>
+                                    <td class="text-right">
+                                        <div class="btn-group text-right">
+                                            <button type="button" class="btn btn-danger br2 btn-xs fs12 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                Suspended
+                                                <span class="caret ml5"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="#">Edit</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Contact</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li class="active">
+                                                    <a href="#">Active</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Suspend</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>*@
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

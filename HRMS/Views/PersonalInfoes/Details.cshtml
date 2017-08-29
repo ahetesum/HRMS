@@ -1,0 +1,163 @@
+﻿@model HRMS.Models.PersonalInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PersonalInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HusbandOrSpouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HusbandOrSpouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdharNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdharNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotherTounge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotherTounge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PasspostNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PasspostNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relagion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relagion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmergencyContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmergencyContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmergencyPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmergencyPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

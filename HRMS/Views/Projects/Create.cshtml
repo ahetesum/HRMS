@@ -1,0 +1,78 @@
+﻿@model HRMS.Models.Project
+<div class="admin-form theme-primary">
+
+    <div class="panel heading-border panel-primary">
+        <div class="panel-body bg-light">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+                <div class="section-divider mb40" id="spy1">
+                    <span>Project</span>
+                </div>
+                <!-- .section-divider -->
+                <!-- Basic Inputs -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="section">
+                            <label class="field">
+                                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Name" } })
+                            </label>
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control", @placeholder = "Code" } })
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "form-control", @placeholder = "Start Date" } })
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="section">
+                            <label class="field">
+                                @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "form-control", @placeholder = "End Date" } })
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="section">
+                <label for="datepicker2" class="field prepend-picker-icon">
+                    <input type="text" id="datepicker2" name="datepicker2" class="gui-input hasDatepicker" placeholder="Datepicker Addon"><button type="button" class="ui-datepicker-trigger"><i class="fa fa-calendar-o"></i></button>
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+                <!-- end .section section -->
+                <!-- end .form-body section -->
+                <div class="panel-footer ">
+                    <button type="submit" class="button btn-primary">Submit</button>
+                </div>
+                <!-- end .form-footer section -->
+    }
+        </div>
+    </div>
+</div>
+
+
+

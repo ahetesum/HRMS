@@ -1,0 +1,110 @@
+﻿
+<div class="admin-form theme-primary">
+
+    <div class="panel heading-border panel-primary">
+        <div class="panel-body bg-light">
+
+            <div class="tray tray-center">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-visible" id="spy2">
+                            <div class="panel-heading">
+                                <div class="panel-title hidden-xs">
+                                    <span class="glyphicon glyphicon-tasks"></span>Resource Management
+                                </div>
+                            </div>
+                            <div class="panel-body pn">
+                                <div id="datatable2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                    <div class="dt-panelmenu clearfix"><div class="dataTables_length" id="datatable2_length"><label>Show <select name="datatable2_length" aria-controls="datatable2" class="form-control input-sm"><option value="5">5</option><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="-1">All</option></select> entries</label></div><div id="datatable2_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="Enter Terms..." aria-controls="datatable2"></label></div></div><table class="table table-striped table-hover dataTable no-footer" id="datatable2" cellspacing="0" width="100%" role="grid" aria-describedby="datatable2_info" style="width: 100%;">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 117px;">Name</th><th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 184px;">Position</th><th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 54px;">Office</th><th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 35px;">Age</th><th class="sorting" tabindex="0" aria-controls="datatable2" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 77px;">Start date</th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Salary" style="width: 54px;">Salary</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">Bradley Greer</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>41</td>
+                                                <td>2012/10/13</td>
+                                                <td>$132,000</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td class="sorting_1">Brielle Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2012/12/02</td>
+                                                <td>$372,000</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">Cedric Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2012/03/29</td>
+                                                <td>$433,060</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td class="sorting_1">Dai Rios</td>
+                                                <td>Personnel Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>35</td>
+                                                <td>2012/09/26</td>
+                                                <td>$217,500</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td class="sorting_1">Gloria Little</td>
+                                                <td>Systems Administrator</td>
+                                                <td>New York</td>
+                                                <td>59</td>
+                                                <td>2009/04/10</td>
+                                                <td>$237,500</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core
+    Core.init();
+
+    $('#datatable2').dataTable({
+        "aoColumnDefs": [{
+            'bSortable': false,
+            'aTargets': [-1]
+        }],
+        "oLanguage": {
+            "oPaginate": {
+                "sPrevious": "",
+                "sNext": ""
+            }
+        },
+        "iDisplayLength": 5,
+        "aLengthMenu": [
+          [5, 10, 25, 50, -1],
+          [5, 10, 25, 50, "All"]
+        ],
+        "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+        "oTableTools": {
+            "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+        }
+    });
+
+  });
+</script>
